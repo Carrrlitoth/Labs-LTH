@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "cs",
+			"name": "CS"
+		},
+		{
+			"path": "clock",
+			"name": "1. Alarm Clock"
+		},
+                {
+                        "path": "lift",
+                        "name": "2. Passenger Lift"
+                },
+                {
+                        "path": "wash",
+                        "name": "3. Washing Machine"
+                },
+	],
+	"settings": {
+		"editor.insertSpaces": true,
+		"java.project.referencedLibraries": [
+			"../cs/labs.jar",
+			"../cs/junit/junit-platform-console-standalone-1.9.2.jar"
+                ],
+		"files.exclude": {
+			"archive": true,
+			"bin": true,
+			".project": true,
+			".settings": true,
+			".classpath": true
+		}
+	}
+}
