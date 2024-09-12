@@ -1,0 +1,19 @@
+Preliminary
+This assignment is inspired by the TAI Game Playing Championship held for many years by late prof. Jan Eric Larsson from the EIT department at LTH.
+
+In short:
+Your task in this assignment consists in writing a program playing and winning a Connect Four game (aka 4-in-a-row). See below.
+
+You may try your knowledge on something more challenging, namely Othello game, but the server offering it is unstable at the moment. The final announcement on its permanent availability will be posted on Friday, January 26th.
+
+Closely after the deadline there will be a contest arranged for volunteers, so that you may test your solution against other students' solutions. Details come soon.
+
+In detail:
+The rules of Connect Four can be found, e.g., in https://en.wikipedia.org/wiki/Connect_FourLinks to an external site., but you can find more resources on the web (including complete programs playing it).
+
+In order to get the assignment passed, your program must:
+Not loose against the course game server. As you know, Connect Four is a solved game and you may always at least get a draw. (https://tromp.github.io/c4.htmlLinks to an external site., 1990).
+Not loose consistently, 20 games in a row. The server will store your id and the results of your games in order to verify this.
+A smart method to achieve 1 and 2 is to use alpha-beta pruning in a minimax search for the best move. Your program is required to use it. The server uses this method to do it's moves (cutting search off after a depth of 3), so you might need to search deeper than that.
+Your program should be fast, so a move needs to be decided within max 5 seconds. For that you might need to cut the search tree and introduce evaluation function of your choice. In order to ensure that, the server might behave unpredictably after waiting more than 5 seconds for your next move, e.g., might declare the game ended, with your loss.
+You may write your program in any language you want. However, we provide a Python template Download Python templatethat would allow you to concentrate on the important stuff. In particular, the template contains the details of the protocol, server address, etc. You may find the short intro to the API here as well.
