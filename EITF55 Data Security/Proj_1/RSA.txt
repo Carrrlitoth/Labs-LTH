@@ -1,0 +1,29 @@
+#phi(n) (p-1)*(q-1) N=p*q e är ett värde jag sätter 
+import Euclidean
+import random
+
+def getPQ(fileName):
+    with open(fileName, 'r') as file:
+        p = int(file.readline().strip('\n'))
+        q = int(file.readline().strip('\n'))
+    return p, q
+
+file_name = "512.txt"
+ec = Euclidean.Euclidean()
+p, q = getPQ(file_name)
+N = p*q
+phiN = (p-1) * (q-1)
+e = pow(2, 16) + 1
+d = ec.findD(e, phiN)
+s = random.randrange(1, N)
+c = pow(s, e, N)
+z = pow(c, d, N)
+
+print("Value for s: ", s)
+print("Value for c: ", c)
+print("Value for z: ", z)
+
+if s == z:
+    print("s==z")
+else:
+    print("Rsa fail")
